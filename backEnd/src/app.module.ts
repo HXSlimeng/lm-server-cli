@@ -3,8 +3,7 @@ import { LoggerMiddleware } from './middleware/logger.middleware'
 import { DataSource } from 'typeorm'
 
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { TpmWorkingLocalInfoModule } from './tpm_working_local_info/tpm_working_local_info.module';
-import { TpmWorkingLocalInfo } from './tpm_working_local_info/entities/tpm_working_local_info.entity';
+import { TpmWorkingLocalInfoModule } from './modules';
 
 @Dependencies(DataSource)
 @Module({
@@ -15,7 +14,7 @@ import { TpmWorkingLocalInfo } from './tpm_working_local_info/entities/tpm_worki
     username: 'root',
     password: 'root',
     database: 'twelve_mes',
-    entities: [TpmWorkingLocalInfo]
+    entities: ['./**/*.entity.js']
   }), TpmWorkingLocalInfoModule],
 })
 export class AppModule implements NestModule {
