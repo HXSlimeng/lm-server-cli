@@ -1,2 +1,5 @@
 node_modules
-bkend/node_modules
+# bkend/node_modules
+
+# IDE - VSCode
+.vscode

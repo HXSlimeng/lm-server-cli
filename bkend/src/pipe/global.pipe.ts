@@ -6,5 +6,4 @@ export class RequestPipe implements PipeTransform<any>{
         fs.writeFile('./logs.txt', '\n fetched', () => { })
         return value
     }
-
 }
