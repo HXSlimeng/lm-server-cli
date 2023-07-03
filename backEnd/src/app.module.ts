@@ -5,15 +5,17 @@ import { DataSource } from 'typeorm'
 import { TypeOrmModule } from '@nestjs/typeorm'
 import { TpmWorkingLocalInfoModule } from './modules';
 
+import { Config } from './enum/default';
+
 @Dependencies(DataSource)
 @Module({
   imports: [TypeOrmModule.forRoot({
-    type: 'mysql',
-    host: '10.10.1.45',
-    port: 3306,
-    username: 'root',
-    password: 'root',
-    database: 'twelve_mes',
+    type: Config.DB_TYPE,
+    host: Config.DB_HOST as string,
+    port: Config.DB_PORT as number,
+    username: Config.DB_USERNAME as string,
+    password: Config.DB_PASSWORD as string,
+    database: Config.DB_DATABASE as string,
     entities: ['./**/*.entity.js']
   }), TpmWorkingLocalInfoModule],
 })
