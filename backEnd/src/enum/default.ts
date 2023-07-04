@@ -5,5 +5,6 @@ export enum Config {
     DB_USERNAME = 'root',
     DB_PASSWORD = 'root',
     DB_DATABASE = 'twelve_mes',
-    DB_TYPE = 'mysql'
+    DB_TYPE = 'mysql',
+    JWT_SESRET = '%E5%A4%A9%E6%B4%A5%E8%8F%B2%E7%89%B9'
 }

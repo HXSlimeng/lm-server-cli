@@ -1,13 +1,15 @@
-import { Dependencies, MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
+import { Dependencies, MiddlewareConsumer, Module, NestModule, RequestMethod, UseGuards } from '@nestjs/common';
 import { LoggerMiddleware } from './middleware/logger.middleware'
 import { DataSource } from 'typeorm'
 
 import { TypeOrmModule } from '@nestjs/typeorm'
-import { TpmWorkingLocalInfoModule } from './modules';
+import { TpmWorkingLocalInfoModule, AuthModule, UserModule } from './modules';
 
 import { Config } from './enum/default';
+import { AuthGuard } from './guards/auth.guard';
 
 @Dependencies(DataSource)
+// @UseGuards(AuthGuard)
 @Module({
   imports: [TypeOrmModule.forRoot({
     type: Config.DB_TYPE,
@@ -17,12 +19,11 @@ import { Config } from './enum/default';
     password: Config.DB_PASSWORD as string,
     database: Config.DB_DATABASE as string,
     entities: ['./**/*.entity.js']
-  }), TpmWorkingLocalInfoModule],
+  }), TpmWorkingLocalInfoModule, AuthModule, UserModule]
 })
 export class AppModule implements NestModule {
-  constructor() {
-  }
+
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LoggerMiddleware).forRoutes({ path: 'cats', method: RequestMethod.GET })
+    consumer.apply(LoggerMiddleware).forRoutes({ path: '*', method: RequestMethod.ALL })
   }
 }

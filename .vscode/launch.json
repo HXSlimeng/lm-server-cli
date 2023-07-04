@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "后端服务",
       "skipFiles": ["<node_internals>/**", "${workspaceFolder}/bkend/node_modules"],
-      "program": "${workspaceFolder}\\bkend\\src\\main.ts",
+      "program": "${workspaceFolder}\\backEnd\\src\\main.ts",
       "outFiles": ["${workspaceFolder}/**/*.js"]
     }
   ]

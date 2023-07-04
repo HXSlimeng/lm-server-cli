@@ -1,9 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards } from '@nestjs/common';
 import { TpmWorkingLocalInfoService } from './tpm_working_local_info.service';
 import { CreateTpmWorkingLocalInfoDto } from './dto/create-tpm_working_local_info.dto';
 import { UpdateTpmWorkingLocalInfoDto } from './dto/update-tpm_working_local_info.dto';
 import { TpmWorkingLocalInfo } from './entities/tpm_working_local_info.entity';
+import { AuthGuard } from '../../guards/auth.guard'
+import { RequestPipe } from 'src/pipe';
 
+// @UseGuards(AuthGuard)
 @Controller('tpmWorkingLocalInfo')
 export class TpmWorkingLocalInfoController {
   constructor(private readonly tpmWorkingLocalInfoService: TpmWorkingLocalInfoService) { }
