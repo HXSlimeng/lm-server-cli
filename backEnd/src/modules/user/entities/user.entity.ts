@@ -1,4 +1,5 @@
 import { Column, PrimaryGeneratedColumn } from "typeorm"
+import { isNumber } from 'class-validator'
 
 export class User {
 
