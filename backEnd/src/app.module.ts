@@ -14,7 +14,7 @@ import { AuthGuard } from './guards/auth.guard';
   imports: [TypeOrmModule.forRoot({
     type: Config.DB_TYPE,
     host: Config.DB_HOST as string,
-    port: Config.DB_PORT as number,
+    port: Config.DB_PORT as const,
     username: Config.DB_USERNAME as string,
     password: Config.DB_PASSWORD as string,
     database: Config.DB_DATABASE as string,

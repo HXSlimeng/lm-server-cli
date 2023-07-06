@@ -76,71 +76,6 @@ importers:
       tsconfig-paths: 4.2.0
       typescript: 5.1.6
 
-  bkend:
-    specifiers:
-      '@nestjs/cli': ^10.0.0
-      '@nestjs/common': ^10.0.0
-      '@nestjs/core': ^10.0.0
-      '@nestjs/mapped-types': '*'
-      '@nestjs/platform-express': ^10.0.0
-      '@nestjs/schematics': ^10.0.0
-      '@nestjs/testing': ^10.0.0
-      '@nestjs/typeorm': ^10.0.0
-      '@types/express': ^4.17.17
-      '@types/jest': ^29.5.2
-      '@types/node': ^20.3.1
-      '@types/supertest': ^2.0.12
-      '@typescript-eslint/eslint-plugin': ^5.59.11
-      '@typescript-eslint/parser': ^5.59.11
-      eslint: ^8.42.0
-      eslint-config-prettier: ^8.8.0
-      eslint-plugin-prettier: ^4.2.1
-      jest: ^29.5.0
-      mysql2: ^3.4.3
-      prettier: ^2.8.8
-      reflect-metadata: ^0.1.13
-      rxjs: ^7.8.1
-      source-map-support: ^0.5.21
-      supertest: ^6.3.3
-      ts-jest: ^29.1.0
-      ts-loader: ^9.4.3
-      ts-node: ^10.9.1
-      tsconfig-paths: ^4.2.0
-      typeorm: ^0.3.17
-      typescript: ^5.1.3
-    dependencies:
-      '@nestjs/common': 10.0.4_atc7tu2sld2m3nk4hmwkqn6qde
-      '@nestjs/core': 10.0.4_bwomyhfqiwqbqutnuspxxnjgzq
-      '@nestjs/mapped-types': 2.0.2_agaqghbz3zzekb3t56l2vralpm
-      '@nestjs/platform-express': 10.0.4_326dfrw5dbl4fxc5bxibwzmlna
-      '@nestjs/typeorm': 10.0.0_csthx6iml5ao4x5jky5dbyl3ti
-      mysql2: 3.4.3
-      reflect-metadata: 0.1.13
-      rxjs: 7.8.1
-      typeorm: 0.3.17_447fah7llympsqcajhfwyf32mi
-    devDependencies:
-      '@nestjs/cli': 10.0.5
-      '@nestjs/schematics': 10.0.1_typescript@5.1.6
-      '@nestjs/testing': 10.0.4_6f6h4up6cpd4mtjnq2keaw5q5a
-      '@types/express': 4.17.17
-      '@types/jest': 29.5.2
-      '@types/node': 20.3.2
-      '@types/supertest': 2.0.12
-      '@typescript-eslint/eslint-plugin': 5.60.1_nxpvb2fnld4vk2v7o3443dfbne
-      '@typescript-eslint/parser': 5.60.1_knnjr7kq4rs2qtmvdkf5nzsniu
-      eslint: 8.43.0
-      eslint-config-prettier: 8.8.0_eslint@8.43.0
-      eslint-plugin-prettier: 4.2.1_zh6vkmzat4wtnmvmftdassiwyu
-      jest: 29.5.0_mcg36zosyiwaum4polc7rxa5vm
-      prettier: 2.8.8
-      source-map-support: 0.5.21
-      supertest: 6.3.3
-      ts-jest: 29.1.0_tiloc3ejst55n76oty5rbi22ra
-      ts-loader: 9.4.4_typescript@5.1.6
-      ts-node: 10.9.1_eusldyghqqa7ybpza2tam24c3e
-      tsconfig-paths: 4.2.0
-      typescript: 5.1.6
-
   frontEnd:
     specifiers:
       '@vitejs/plugin-vue': ^4.1.0
@@ -1191,26 +1126,6 @@ packages:
       tslib: 2.6.0
       uid: 2.0.2
 
-  /@nestjs/common/10.0.4_atc7tu2sld2m3nk4hmwkqn6qde:
-    resolution: {integrity: sha512-p/QG9u5qUAjFlf1DdifPw87KK24hEY3GldignHrM6NgoKzdBXPNA4k8FL0I+HYPqX/hH7pAUEHQCUmjAz5L8bg==}
-    peerDependencies:
-      class-transformer: '*'
-      class-validator: '*'
-      reflect-metadata: ^0.1.12
-      rxjs: ^7.1.0
-    peerDependenciesMeta:
-      class-transformer:
-        optional: true
-      class-validator:
-        optional: true
-    dependencies:
-      iterare: 1.2.1
-      reflect-metadata: 0.1.13
-      rxjs: 7.8.1
-      tslib: 2.6.0
-      uid: 2.0.2
-    dev: false
-
   /@nestjs/core/10.0.4_bwomyhfqiwqbqutnuspxxnjgzq:
     resolution: {integrity: sha512-shYB81/FgxtnlXRYcadzmduewkgjxGtIoTZBVzf9SM2FmLiltVGQJvZFkOdweTss19yA/503H62duZ6/Syev4w==}
     requiresBuild: true
@@ -1250,23 +1165,6 @@ packages:
       '@nestjs/common': 10.0.4_3yehvwuinvxioxgkmz5xpqglqq
       '@types/jsonwebtoken': 9.0.2
       jsonwebtoken: 9.0.0
-    dev: false
-
-  /@nestjs/mapped-types/2.0.2_agaqghbz3zzekb3t56l2vralpm:
-    resolution: {integrity: sha512-V0izw6tWs6fTp9+KiiPUbGHWALy563Frn8X6Bm87ANLRuE46iuBMD5acKBDP5lKL/75QFvrzSJT7HkCbB0jTpg==}
-    peerDependencies:
-      '@nestjs/common': ^8.0.0 || ^9.0.0 || ^10.0.0
-      class-transformer: ^0.4.0 || ^0.5.0
-      class-validator: ^0.13.0 || ^0.14.0
-      reflect-metadata: ^0.1.12
-    peerDependenciesMeta:
-      class-transformer:
-        optional: true
-      class-validator:
-        optional: true
-    dependencies:
-      '@nestjs/common': 10.0.4_atc7tu2sld2m3nk4hmwkqn6qde
-      reflect-metadata: 0.1.13
     dev: false
 
   /@nestjs/mapped-types/2.0.2_omdtlnzdcbeflgkzl7rbi7bs4u:

@@ -1,0 +1,13 @@
+services:
+  web-service:
+    container_name: web-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: node_web
+    ports:
+      - 3000:3000
+    restart: always
+    volumes:
+      - ./html/:/web_service/frontEnd/dist/
+    command: sh -c "npm run start:prod --workspaces"
