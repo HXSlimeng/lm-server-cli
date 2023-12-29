@@ -15,8 +15,8 @@
 - [x] Build width docker-compose
 - [x] nginx
 - [x] swagger docs
-- [X] use Typeorm to CURD
+- [X] use Typeorm
 
 ## Technology
- - Backend: `Nest` `Typeorm`
+ - Backend: `Nest`
  - Frontend `Vue3`
